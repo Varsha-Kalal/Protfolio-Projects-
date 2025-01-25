@@ -3,7 +3,7 @@
 
 Hi, I'm **Varsha**, a passionate data analyst with **3 years of experience**.  My work focuses on transforming data into actionable insights to solve real-world problems.
  
-📫 Reach me on **[LinkedIn](www.linkedin.com/in/varsha-kalal)** or email at **[Email](varshakalal4553@gmail.com)**.
+📫 Reach me on **[LinkedIn](www.linkedin.com/in/varsha-kalal)** or **[Email](varshakalal4553@gmail.com)**.
 
 ## 🌟 Featured Projects
 
