@@ -25,7 +25,6 @@ SELECT *
 FROM REM_DUP
 where rw_num =1;
 
--- Right click on table > COPY TO CLIPBOARD > ccreate statement> EDITOR PAGE AND CTRL+V 
 
 CREATE TABLE `layoff2` (
   `company` text,
@@ -39,7 +38,7 @@ CREATE TABLE `layoff2` (
   `funds_raised_millions` int DEFAULT NULL,
   `rw_num` INT
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
--- THE ABOVE STMT WILL CREATE A EMPTY TABLE 
+-
 
 SELECT * FROM layoff2;
 
@@ -55,8 +54,7 @@ FROM layoff2
 where rw_num >1;
 
 
-SET SQL_SAFE_UPDATES =0;  -- OR GO TO EDIT > SQL EDITOR > UNCHECK THE SAFE MODE - AFTER DOING this refresh mysql 
-
+SET SQL_SAFE_UPDATES =0; 
 DELETE 
 FROM layoff2
 where rw_num >1;
@@ -73,7 +71,7 @@ SELECT * FROM LAYOFF2;
 
 SELECT DISTINCT industry
 FROM layoff2
-order by 1;  -- We have have rows like crypto, cryptocurrency, crypto currency and we to make them one 
+order by 1;  
 
 SELECT *
 FROM layoff2
@@ -85,7 +83,7 @@ WHERE industry LIKE 'crypto%';
 
 SELECT DISTINCT location 
 FROM layoff2
-order by 1;    -- after scrolling over the column everything looks good in this 
+order by 1;   
 
 SELECT DISTINCT country
 FROM layoff2
