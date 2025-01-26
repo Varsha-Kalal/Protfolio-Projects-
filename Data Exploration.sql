@@ -132,10 +132,18 @@ WHERE s.created_date < g.gold_signup_date
 GROUP BY s.userid 
 ORDER BY s.userid;
 
-/* 9. if buying each product generates points e.g 5rs = 2 zomato points and each product has different purchasing points 
-for e.g p1 5rs = 1 zomato point for p2 10rs= 5 zomato points and p3 5rs = 1 zomato point calculate points collected by each customer and for which product most points 
-were collected till now.
-calculate points collected by each customer and for which prodcut most points were collected till now */
+/* 9. In the first year after the customer joined the gold program(including the joining date) irrrespective of what the customer purchased they earn 5 zomato points 
+for every 10 rs spent. who earned more, 1 or 3? and what is there point earnings in the first year*/
+
+--10RS = 5 points 
+--1rs = 0.5 points 
+
+SELECT s.userid, p.price*0.5 as total_points
+FROM sales s
+JOIN goldusers_signup g ON s.userid = g.userid 
+JOIN product p ON s.product_id = p.product_id 
+WHERE s.created_date BETWEEN g.gold_signup_date AND DATE_ADD(g.gold_signup_date, INTERVAL 1 YEAR)
+ORDER BY s.userid ASC 
 
 
 
